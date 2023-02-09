@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<script>
+	
+	var minimo = 0;
+	var maximo = 10;
+	var numeroPensado = Math.floor(Math.random() * (maximo - minimo + 1) + minimo);
+	var tentativas = 1
+
+	while (tentativas <= 3) {
+
+		var chute = parseInt(prompt("Qual seu chute?"));
+
+		if (chute === numeroPensado) {
+
+			alert("Parabéns, você acertou!");
+			break;
+		} else {
+
+			alert("Que pena, você errou!");
+		}
+
+		tentativas++
+	}
+
+	alert("O número era " + numeroPensado + "!!");
+
+
+
+</script>

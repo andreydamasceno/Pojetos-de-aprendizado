@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<script>
+
+	function soma() {
+
+		var num1 = parseInt(prompt("Digite um número:"));
+		var num2 = parseInt(prompt("Digite outro número:"));
+		var resultado = (num1 + num2);
+		alert("O resultado é " + resultado + "!");
+	}
+
+	 function subtrai() {
+
+	 	var num1 = parseInt(prompt("Digite um número:"));
+	 	var num2 = parseInt(prompt("Digite outro número:"));
+	 	var resultado = (num1 - num2);
+	 	alert("O resultado é " + resultado + "!");
+	 }
+
+	 function multiplica() {
+
+	 	var num1 = parseInt(prompt("Digite um número:"));
+	 	var num2 = parseInt(prompt("Digite outro número:"));
+	 	var resultado = (num1 * num2);
+	 	alert("O resultado é " + resultado + "!");
+	 }
+
+	 function divide() {
+
+	 	var num1 = parseInt(prompt("Digite um número:"));
+	 	var num2 = parseInt(prompt("Digite outro número:"));
+	 	var resultado = (num1 / num2);
+	 	alert("O resultado é " + resultado + "!");
+	 }
+
+	while (operacao = prompt("Qual operação matemática deseja realizar? Digite +, -, *, / ou sair")){
+
+	 	if (operacao === "+") {
+	 		soma();
+	 	} else if (operacao === "-") {
+	 		subtrai();
+	 	} else if (operacao === "*") {
+	 		multiplica();
+	 	} else if (operacao === "/") {
+	 		divide();
+	 	} else if (operacao === "sair") {
+	 			 		break;
+	 	} else if (operacao != "+" && operacao != "-" && operacao != "*" && operacao != "/" && operacao != "sair") {
+	 		alert("Opção inválida!!");
+	 	}	
+ 	}
+	
+	alert("Até a próxima!");
+
+</script>

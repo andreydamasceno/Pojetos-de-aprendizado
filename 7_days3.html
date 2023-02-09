@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<script>
+	
+	var area = prompt("Deseja seguir na área de Front-End ou deseja seguir na área de Back-End:");
+
+	while (area !== "Front-End" || area !== "Back-End"){
+		
+		if (area === "Front-End") {
+
+			var escolha = prompt("Deseja aprender React ou Vue?");
+			while (escolha !== "React" || escolha !== "Vue"){
+
+				if (escolha === "React"){
+
+					break;
+				} else if (escolha === "Vue") {
+
+					break;
+				} else {
+
+					alert("Não é uma opção válida!");
+					var escolha = prompt("Deseja aprender React ou Vue?");
+				}
+			}
+				break;
+		} else if (area === "Back-End") {
+
+			var escolha = prompt("Deseja aprender C# ou Java?");
+			while (escolha !== "C#" || escolha !== "Java"){
+
+				if (escolha === "C#") {
+
+					break;
+				} else if (escolha === "Java") {
+
+					break;
+				} else {
+
+					alert("Não é uma opção válida!");
+					var escolha = prompt("Deseja aprender C# ou Java?");
+				}
+			}
+			break;
+
+		} else {
+			
+			alert("Não é uma opção válida!");
+			var area = prompt("Deseja seguir na área de Front-End ou deseja seguir na área de Back-End:");
+		}
+	}
+
+
+	var escolhaFinal = prompt("Digite 1 se deseja seguir se especializando em " + escolha + " ou 2 se deseja seguir se desenvolvendo para se tornar Fullstack:");
+
+	while (escolhaFinal !== "1" || escolhaFinal !== "2"){
+
+		if (escolhaFinal === "1") {
+
+			alert("Legal, continue estudando " + escolha + " e você ficará cada vez melhor!");
+			break;
+		} else if (escolhaFinal === "2"){
+
+			alert("Muito bem, continue estudando até virar Fullstack!");
+			break;
+		} else {
+
+			alert("Não é uma opção válida!");
+			var escolhaFinal = prompt("Digite 1 se deseja seguir se especializando em " + escolha + " ou 2 se deseja seguir se desenvolvendo para se tornar Fullstack:");
+		}
+	}
+
+	var msg = prompt("Tem mais alguma tecnologia que queira aprender? Em caso positivo digite ok:");
+
+	while (msg === "ok"){
+
+		var tecnologia = prompt("Qual?");
+		alert("Muito bem, existem muitos cursos em que você pode aprender " + tecnologia + "!!!");
+		var msg = prompt("Tem mais alguma tecnologia que queira aprender? Em caso positivo digite ok");
+	}
+
+</script>

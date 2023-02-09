@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<script>
+
+	var frutas = [];
+	var doces = [];
+	var carnes = [];
+	var outros = [];
+	var comida = "";
+	var categoria = "";
+	var remover = "";
+	var adiciona = "sim";
+
+	while (adiciona != "não") {
+
+		if (frutas.length === 0 && doces.length === 0 && carnes.length === 0 && outros.length === 0) {
+
+			adiciona = prompt("Você deseja adicionar alguma comida? Digite sim ou não:");
+		} else {
+
+			adiciona = prompt("Você deseja adicionar ou remover alguma comida? Digite sim, não ou remover:");
+		}
+
+		while (adiciona != "sim" && adiciona != "não" && adiciona != "remover") {
+
+			alert("Opção inválida!");
+			adiciona = prompt("Você deseja adicionar alguma comida? Digite sim ou não:");
+		}
+
+		if (adiciona === "não") {
+
+			break;
+		}
+
+		if (adiciona === "sim") {
+
+			categoria = prompt("Em qual catgoria deseja adicionar? Digite frutas, doces, carnes ou outros:");
+
+				if (categoria === "frutas") {
+
+				 comida = prompt("Qual fruta deseja adicionar?");
+				 frutas.push(comida);	
+				} else if (categoria === "doces") {
+
+					comida = prompt("Qual doce deseja adicionar?");
+				 	doces.push(comida);
+				} else if (categoria === "carnes") {
+
+					comida = prompt("Qual carne deseja adicionar?");
+				 	carnes.push(comida);
+				} else if (categoria === "outros") {
+
+					comida = prompt("O que deseja adicionar?");
+					outros.push(comida);
+				} else {
+
+					alert("Opção inválida!");
+					categoria = prompt("Em qual catgoria deseja adicionar? Digite frutas, doces, carnes ou outros:");
+				}
+			
+
+		} else if (adiciona === "remover"){
+
+			if (frutas.length === 0 && doces.length === 0 && carnes.length === 0 && outros.length === 0) {
+
+				alert("Sua lista está vazia!");
+			} else {
+
+				remover = prompt("Sua lista:\nFrutas: " + frutas + "\nDoces: " + doces + "\nCarnes: " + carnes + "\nOutros: " + outros + "\nQual produto deseja remover?");
+				if (frutas.indexOf(remover) != -1) {
+					frutas.splice(frutas.indexOf(remover), 1);
+					alert(remover + " foi removido com sucesso!");
+				} else if (doces.indexOf(remover) != -1) {
+					doces.splice(doces.indexOf(remover), 1);
+					alert(remover + " foi removido com sucesso!");
+				} else if (carnes.indexOf(remover) != -1) {
+					carnes.splice(carnes.indexOf(remover), 1);
+					alert(remover + " foi removido com sucesso!");
+				} else if (outros.indexOf(remover) != -1) {
+					outros.splice(outros.indexOf(remover), 1);
+					alert(remover + " foi removido com sucesso!");
+				} else {
+					alert("produto não encontrado!!!");
+				}
+			}
+		}
+	}
+		
+	document.write("Frutas: " + frutas + "<br> Doces: " + doces + "<br> Carnes: " + carnes + "<br> Outros: " + outros);	
+
+</script>
